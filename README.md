@@ -14,6 +14,7 @@ OSCAR uses a few libraries. These include:
 -feedparser
 -shodan
 -readline
+-pillow
 
 **Please note that you will need to setup ONE twitter app for you/your business.**
 
@@ -24,11 +25,12 @@ The the readline feature is completely optional.
 Please be sure to run the DEPENDENCY_CHECK script first!
 
 After running the dependency check, run the setup.py script. This will allow you to setup all necessary auth files/data.
+**PLEASE NOTE THAT THE SETUP SCRIPT WILL NOT INSTALL MISSING LIBRARIES! Please use pip.**
 
 **To scrape pastebin**
 To scrape pastebin, enter the regex string to search. Then, run oscar and run the pastebin scraper!
 
-Add regex strings to pSearch.dat located in the root directory. This will be changed soon. 
+Add regex strings to pSearch.dat located in the root directory. This will be changed soon.
 
 **To edit rss filter options**
 Edit the keywords in /rss/filter.dat
