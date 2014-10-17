@@ -5,7 +5,6 @@ import shodan
 shodan_key_file = open('auth/''shodankey.txt','r')
 shodan_key_line = shodan_key_file.readlines()
 SHODAN_API_KEY = shodan_key_line[1].rstrip()
-#SHODAN_API_KEY = 'ZPRMNqeF6CHdElXdyOJ2hB28Wl47l8DV'
 sho_api = shodan.Shodan(SHODAN_API_KEY)
 shodan_key_file.close()
 
