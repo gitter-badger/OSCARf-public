@@ -73,9 +73,6 @@ APP_NAME = tappline[1].rstrip()
 CONSUMER_KEY = tappline[3].rstrip()
 CONSUMER_SECRET = tappline[5].rstrip()
 tappfile.close()
-#APP_NAME = 'OSCAR Framework'
-#CONSUMER_KEY = '3SiJb8zgecwbuio5shsg'
-#CONSUMER_SECRET = 'LZDCOneeMgwXfKLFCKgEVMGeerDg1KsixcKeIDXz9Y'
 
 #file that Oauth data is stored
 TOKEN_FILE = 'auth/'+'token.txt'
