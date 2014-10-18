@@ -12,6 +12,7 @@ so many tabs in a browser.
 There are a few bugs in OSCAR-F, however, we are slowly working on crushing them and working on features.
 
 OSCAR uses a few libraries. These include:
+
 -Twitter
 -tweepy
 -feedparser
@@ -21,11 +22,13 @@ OSCAR uses a few libraries. These include:
 
 **Please note that you will need to setup ONE twitter app for you/your business.**
 
+## Installing
+
 **You will probably need to use sudo to run the setup script. This is becasue it creates files and directories.**
 
 The the readline feature is completely optional.
 
-Please be sure to run the DEPENDENCY_CHECK script first!
+Please be sure to run the `DEPENDENCY_CHECK` script first! Additionally, dependencies can be installed via `pip install -r requirements.txt`
 
 After running the dependency check, run the setup.py script. This will allow you to setup all necessary auth files/data.
 **PLEASE NOTE THAT THE SETUP SCRIPT WILL NOT INSTALL MISSING LIBRARIES! Please use pip.**
