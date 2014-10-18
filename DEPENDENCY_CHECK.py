@@ -54,6 +54,12 @@ try:
 except:
   print "[+]MISSING: PIL/Pillow module"
 
+try:
+    import mechanize
+    print "[+]FOUND: mechanize"
+except:
+    print "[+]MISSING: mechanize"
+
 if not os.path.exists("auth"):
   print "Adding the 'auth' directory. Be sure to run the setup script after this one!!!"
   os.mkdir("auth")
