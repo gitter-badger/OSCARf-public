@@ -69,10 +69,10 @@ print "Creating shodan auth file"
 if not os.path.exists("auth"):
   exit("auth directory not found")
 
-try:
-    with open('auth/'+'shodankey.txt') as file:
-        exit('Shodan auth is already present!')
-except:
+
+if not os.path.isfile('auth/twitter_app.dat'):
+  exit('Shodan auth is already present!')
+else:
   f = open('auth/'+'shodankey.txt','w')
   key = raw_input('Shodan API key: ')
   f.write('#Shodan API key\n')
