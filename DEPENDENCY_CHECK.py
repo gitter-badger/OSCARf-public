@@ -50,9 +50,9 @@ except:
 
 try:
   from PIL import Image
-  print "[+]FOUND: PIL"
+  print "[+]FOUND: PIL/Pillow"
 except:
-  print "[+]MISSING: PIL module"
+  print "[+]MISSING: PIL/Pillow module"
 
 if not os.path.exists("auth"):
   print "Adding the 'auth' directory. Be sure to run the setup script after this one!!!"
