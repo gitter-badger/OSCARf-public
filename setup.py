@@ -57,8 +57,6 @@ except:
 
 #file that Oauth data is stored
 TOKEN_FILE = 'auth/'+'token.txt'
-#i = open(TOKEN_FILE,'w')
-#i.close()
 try:
     (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
 except IOError, e:
