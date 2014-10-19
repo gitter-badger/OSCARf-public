@@ -71,7 +71,7 @@ if not os.path.exists("auth"):
     exit("auth directory not found")
 
 
-if not os.path.isfile('auth/twitter_app.dat'):
+if os.path.isfile('auth/shodankey.txt'):
     exit('Shodan auth is already present!')
 else:
     f = open('auth/'+'shodankey.txt','w')
