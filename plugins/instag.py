@@ -9,8 +9,6 @@ def checker(usernom):
     try:
         data = urllib2.urlopen(inst)
         valid = True
-        #data = data.read()
-        #print data
         #If we get a 404/not found, then set valid to 0
     except urllib2.HTTPError:
         valid = False

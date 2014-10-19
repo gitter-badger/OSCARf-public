@@ -88,20 +88,12 @@ TOKEN_FILE = 'auth/'+'token.txt'
 try:
     (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
 except IOError, e:
-    #(oauth_token, oauth_token_secret) = oauth_dance(APP_NAME,
-    #                                                 CONSUMER_KEY,
-    #                                                 CONSUMER_SECRET)
-    #print e.errno
-    #print e
-    #write_token_file(TOKEN_FILE, oauth_token, oauth_token_secret)
     print "Please run the TWITTERSETUP.py file to get the token file!"
     exit()
 
 t_auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 t_auth.set_access_token(oauth_token, oauth_token_secret)
 t_api = tweepy.API(t_auth)
-#name = api.me().name
-#print "Your account name:",name
 
 
 def main():

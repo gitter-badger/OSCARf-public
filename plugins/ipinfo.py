@@ -9,8 +9,6 @@ import webbrowser
 
 def lookup(ip):
 
-  # ip = raw_input("Enter IP address: ")
-  # Ip url for json API
 
     ipUrl = 'http://ip-api.com/json/'
     ip_query = ipUrl + ip

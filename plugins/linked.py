@@ -184,12 +184,9 @@ def bing(pos, com, saveout):
 
 def dupr(saveout):
 
-  # with open('OUTPUT.csv','r') as f1, open('LINKEDIN_OUT.csv','a') as f2:
-
     f1 = csv.reader(open('OUTPUT.csv', 'r'), delimiter='+')
     f2 = csv.writer(open('LINKEDIN_OUT.csv', 'w'), delimiter='+')
 
-  # seen = set()
 
     links = set()
     for row in f1:

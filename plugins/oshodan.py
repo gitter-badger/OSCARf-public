@@ -89,18 +89,6 @@ def sub_search(sho_api):
         print 'Results found: %s' % search_query['total']
         thread.start_new_thread(downloader, (res_out, search_query))
 
-        # for result in search_query['matches']:
-        #    print >>res_out,"--START--"
-        #    print >>res_out,'IP: %s' % result['ip_str']
-        #    print >>res_out,result['data']
-        #    print >>res_out,result['hostnames']
-        #    print >>res_out,result['port']
-        #    print >>res_out,result['os']
-        #    print >>res_out,"--END--"
-        #    print >>res_out,""
-        #    print >>res_out,""
-        # res_out.close()
-
         print 'Results have been exported to: NET-RESULTS.txt'
         menu()
     except Exception, e:
@@ -118,18 +106,6 @@ def host_search(sho_api):
         print 'Results found: %s' % search_query['total']
         thread.start_new_thread(downloader, (res_out, search_query))
 
-        # for result in search_query['matches']:
-        #    print >>res_out,"--START--"
-        #    print >>res_out,'IP: %s' % result['ip_str']
-        #    print >>res_out,result['data']
-        #    print >>res_out,result['hostnames']
-        #    print >>res_out,result['port']
-        #    print >>res_out,result['os']
-        #    print >>res_out,"--END--"
-        #    print >>res_out,""
-        #    print >>res_out,""
-        # res_out.close()
-
         print 'Results have been exported to: HOST-RESULTS.txt'
         menu()
     except Exception, e:
@@ -146,18 +122,6 @@ def print_search(sho_api):
         search_query = sho_api.search(data)
         print 'Results found: %s' % search_query['total']
         thread.start_new_thread(downloader, (res_out, search_query))
-
-        # for result in search_query['matches']:
-        #    print >>res_out,"--START--"
-        #    print >>res_out,'IP: %s' % result['ip_str']
-        #    print >>res_out,result['data']
-        #    print >>res_out,result['hostnames']
-        #    print >>res_out,result['port']
-        #    print >>res_out,result['os']
-        #    print >>res_out,"--END--"
-        #    print >>res_out,""
-        #    print >>res_out,""
-        # res_out.close()
 
         print 'Results have been exported to: PRINTER-RESULTS.txt'
         menu()
@@ -177,18 +141,6 @@ def port_search(sho_api):
         search_query = sho_api.search(data)
         print 'Results found: %s' % search_query['total']
         thread.start_new_thread(downloader, (res_out, search_query))
-
-        # for result in search_query['matches']:
-        #    print >>res_out,"--START--"
-        #    print >>res_out,'IP: %s' % result['ip_str']
-        #    print >>res_out,result['data']
-        #    print >>res_out,result['hostnames']
-        #    print >>res_out,result['port']
-        #    print >>res_out,result['os']
-        #    print >>res_out,"--END--"
-        #    print >>res_out,""
-        #    print >>res_out,""
-        # res_out.close()
 
         print 'Results have been exported to: PORT-RESULTS.txt'
         menu()

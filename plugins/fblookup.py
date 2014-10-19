@@ -29,8 +29,6 @@ def instacheck(usernom):
         valid = 1
     except urllib2.HTTPError:
 
-    # data = data.read()
-    # print data
   # If we get a 404/not found, then set valid to 0
 
         valid = 0
@@ -81,8 +79,6 @@ def FBInfo():
         print jsonResponse
         print '\n'
     except:
-
-    # print "There was an error processing your request"
 
         pass
     return
@@ -159,9 +155,6 @@ def FBUsr():
             myCounter += 1
             sleep(2)
         except:
-
-      # print "There was an error processing your request -
-      #  Could be how the user setup permissions"
 
             pass
     return
