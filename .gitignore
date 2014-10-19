@@ -5,4 +5,5 @@ auth/
 *.jpg
 *.txt
 *.csv
-*.swp
+.swp
+.DS_Store
