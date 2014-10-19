@@ -62,3 +62,4 @@ if not os.path.exists('auth'):
     print "Adding the 'auth' directory. Be sure to run the setup",
     print "script after this one!!!"
     os.mkdir('auth')
+print "To install dependencies: pip install -r requirements.txt"
