@@ -37,9 +37,7 @@ After running the dependency check, run the setup.py script. This will allow you
 
 ## To scrape pastebin
 
-To scrape pastebin, enter the regex string to search. Then, run oscar and run the pastebin scraper!
-
-Add regex strings to pSearch.dat located in the root directory. This will be changed soon.
+To scrape pastebin, add regex strings to pSearch.dat located in the root directory. After this, proceed to use oscar.
 
 ## To edit rss filter options
 
