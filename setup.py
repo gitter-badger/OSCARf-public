@@ -24,12 +24,18 @@ if not os.path.isfile('auth/twitter_app.dat'):
         appfile.write("#Consumer Secret\n")
         appsecret = raw_input("Enter twitter app secret key: ")
         appfile.write(appsecret+'\n')
-        appfile.close()
-        sleep(1)
-        exit("Restart the setup script!")
+        #appfile.close()
+        #sleep(1)
+        #appfile.flush()
+        #exit("Restart the setup script!")
     except:
+        appfile.close()
         print "There was an issue creating the twitter app auth data!!"
         exit()
+    finally:
+        appfile.flush()
+        os.fsync(appfile)
+        appfile.close()
 
 
 try:
