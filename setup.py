@@ -7,7 +7,7 @@ from time import sleep
 import sys
 
 if not os.path.exists("auth"):
-    print "Adding the 'auth' directory. Be sure to run the two setup scripts after this one!!!"
+    print "Adding the 'auth' directory."
     try:
         os.mkdir("auth")
     except:
