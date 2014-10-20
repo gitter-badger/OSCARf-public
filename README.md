@@ -46,3 +46,7 @@ Edit the keywords in /rss/filter.dat
 ## To add/remove rss feeds
 
 Edit rss links in /rss/feeds.dat
+
+## To scrape web source code
+
+Edit regex info in webscrape.dat in the root. The path will change soon. 
