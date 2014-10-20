@@ -34,7 +34,9 @@ def downloader(res_out, search_query):
     for result in search_query['matches']:
         outfile.write('--START--')
         outfile.write('IP: %s' % result['ip_str'])
-        outfile.write(result['data'])
+        encout = result['data'].encode('UTF-8')
+        #outfile.write(result['data'])
+        outfile.write(encout)
 
     # print result['hostnames'][0]
 
