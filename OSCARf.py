@@ -44,6 +44,7 @@ from plugins import oscrtwitter
 from plugins import oshodan
 from plugins import portlook
 from plugins import instag
+from plugins import webscrape
 
 
 #----Why 2 twitter libs?----#
@@ -112,6 +113,8 @@ def main():
         -------------
         5. Pastebin Scraper
         -------------
+        6. Web Source File Scraper
+        -------------
 
         0. Exit OSCAR
         """
@@ -127,6 +130,8 @@ def main():
             networkMod()
         elif opt == "5":
             pasteScrape()
+        elif opt == "6":
+            wscrape()
         elif opt == "0":
             print "Thanks for using OSCAR!"
             sys.exit(0)
@@ -306,6 +311,10 @@ def oscrShodan():
     oshodan.menu()
     main()
 
+def wscrape():
+    webscrape.scrape()
+    main()
+    
 if __name__ == "__main__":
     # users may wish to import part of this...
     main()
