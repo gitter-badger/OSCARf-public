@@ -44,6 +44,8 @@ You sould only need to have a read only application!
 
 Once you have a ShodanHQ account or login, go to: http://www.shodanhq.com/api_doc and copy the API key. Please note that if you want to use ALL of the shodan functionality of OSCAR, you will need to purchase an "Unlocked API" 
 
+View API KEY: http://www.shodanhq.com/api_doc
+
 You can purchase the "Unlocked API" addon here: http://www.shodanhq.com/data/addons
 
 ## To scrape pastebin
