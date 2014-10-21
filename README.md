@@ -35,6 +35,17 @@ Please be sure to run the `DEPENDENCY_CHECK` script first! Additionally, as note
 After running the dependency check, run the setup.py script. This will allow you to setup all necessary auth files/data.
 **PLEASE NOTE THAT THE SETUP SCRIPT WILL NOT INSTALL MISSING LIBRARIES! Please use pip.**
 
+## To setup Twitter Application
+
+Navigate to: https://apps.twitter.com/ and setup a new application. Please note the name and keys associated with it. 
+You sould only need to have a read only application!
+
+## Shodan API KEY
+
+Once you have a ShodanHQ account or login, go to: http://www.shodanhq.com/api_doc and copy the API key. Please note that if you want to use ALL of the shodan functionality of OSCAR, you will need to purchase an "Unlocked API" 
+
+You can purchase the "Unlocked API" addon here: http://www.shodanhq.com/data/addons
+
 ## To scrape pastebin
 
 To scrape pastebin, add regex strings to pSearch.dat located in the root directory. After this, proceed to use oscar.
