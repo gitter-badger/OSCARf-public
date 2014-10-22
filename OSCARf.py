@@ -10,7 +10,6 @@
 
 #oscar will automatically try to import first.
 #On exception it will alert the user
-
 import urllib2
 
 try:
@@ -45,6 +44,9 @@ from plugins import oshodan
 from plugins import portlook
 from plugins import instag
 from plugins import webscrape
+from plugins import asciis
+
+asciis.asciiart()
 
 
 #----Why 2 twitter libs?----#
@@ -314,7 +316,7 @@ def oscrShodan():
 def wscrape():
     webscrape.scrape()
     main()
-    
+
 if __name__ == "__main__":
     # users may wish to import part of this...
     main()
