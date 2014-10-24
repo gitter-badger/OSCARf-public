@@ -9,7 +9,6 @@ import webbrowser
 
 def lookup(ip):
 
-
     ipUrl = 'http://ip-api.com/json/'
     ip_query = ipUrl + ip
     try:

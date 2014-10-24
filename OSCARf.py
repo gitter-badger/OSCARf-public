@@ -313,6 +313,7 @@ def oscrShodan():
     oshodan.menu()
     main()
 
+
 def wscrape():
     webscrape.scrape()
     main()
