@@ -14,7 +14,7 @@ if not os.path.exists("auth"):
         exit("run as sudo!")
 if not os.path.isfile('auth/twitter_app.dat'):
     try:
-        appfile = open('auth/twitter_app.dat','w')
+        appfile = open('auth/twitter_app.dat', 'w')
         appfile.write("#App name\n")
         appname = raw_input("Enter twitter app name: ")
         appfile.write(appname+'\n')
@@ -39,14 +39,15 @@ try:
     from twitter.oauth import write_token_file, read_token_file
     from twitter.oauth_dance import oauth_dance
 except:
-    print "[+]ERROR: Unable to import the twitter library! Run Dependency Check!!"
+    print "[+]ERROR: Unable to import the twitter library!",
+    print "Run Dependency Check!!"
     exit()
 
 
 #Authentication information for the application
 #Open file for twitter app auth
 try:
-    tappfile = open('auth/'+'twitter_app.dat','r')
+    tappfile = open('auth/'+'twitter_app.dat', 'r')
     tappline = tappfile.readlines()
     APP_NAME = tappline[1].rstrip()
     CONSUMER_KEY = tappline[3].rstrip()
@@ -61,7 +62,7 @@ try:
     (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
 except IOError, e:
     (oauth_token, oauth_token_secret) = oauth_dance(
-        APP_NAME, CONSUMER_KEY,CONSUMER_SECRET)
+        APP_NAME, CONSUMER_KEY, CONSUMER_SECRET)
     print e.errno
     print e
     write_token_file(TOKEN_FILE, oauth_token, oauth_token_secret)
@@ -74,7 +75,7 @@ if not os.path.exists("auth"):
 if os.path.isfile('auth/shodankey.txt'):
     exit('Shodan auth is already present!')
 else:
-    f = open('auth/'+'shodankey.txt','w')
+    f = open('auth/'+'shodankey.txt', 'w')
     key = raw_input('Shodan API key: ')
     f.write('#Shodan API key\n')
     f.write(key+'\n')

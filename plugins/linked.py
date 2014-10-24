@@ -187,7 +187,6 @@ def dupr(saveout):
     f1 = csv.reader(open('OUTPUT.csv', 'r'), delimiter='+')
     f2 = csv.writer(open('LINKEDIN_OUT.csv', 'w'), delimiter='+')
 
-
     links = set()
     for row in f1:
         if row[2] not in links:

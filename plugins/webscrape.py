@@ -2,12 +2,13 @@
 
 import urllib2
 import re
-#not all systems have readline...if not, just pass and continue.
+# not all systems have readline...if not, just pass and continue.
 try:
-    import readline #nice when you need to use arrow keys and backspace
+    import readline  # nice when you need to use arrow keys and backspace
 except:
     pass
 import sys
+
 
 def scrape():
     site = raw_input("Enter page: ")
@@ -32,11 +33,12 @@ def scrape():
                 outfile = open('scrape-RESULTS.txt', 'a')
             #print m
                 outfile.write(str(i))
-                outfile.write("\n") #may be needed. can always be removed.
+                outfile.write("\n")  # may be needed. can always be removed.
 
             #close the file..or else
                 outfile.close()
-        else: #only need an else because m is boolean
+        else:  # only need an else because m is boolean
             # Continue the loop if not a match so it can go on to the next
             # sequence
+            # NOTE: you don't *really* need an else here...
             continue
