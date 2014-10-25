@@ -50,16 +50,16 @@ You can purchase the "Unlocked API" addon here: http://www.shodanhq.com/data/add
 
 ## To scrape pastebin
 
-To scrape pastebin, add regex strings to pSearch.dat located in the root directory. After this, proceed to use oscar.
+To scrape pastebin, add regex strings to /config/pSearch.dat located in the root directory. After this, proceed to use oscar.
 
 ## To edit rss filter options
 
-Edit the keywords in /rss/filter.dat
+Edit the keywords in /config/rssfilter.dat
 
 ## To add/remove rss feeds
 
-Edit rss links in /rss/feeds.dat
+Edit rss links in /config/rssfeeds.dat
 
 ## To scrape web source code
 
-Edit regex info in webscrape.dat in the root. The path will change soon. 
+Edit regex info in /config/webscrape.dat in the root. The path will change soon. 
