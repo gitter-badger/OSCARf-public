@@ -13,6 +13,8 @@ There are a few bugs in OSCAR-F, however, we are slowly working on crushing them
 
 ## Installing
 
+**All setup files are located within the setup directory!**
+
 OSCAR uses a few libraries. These include:
 
 - Twitter
