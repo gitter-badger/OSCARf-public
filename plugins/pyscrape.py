@@ -10,7 +10,7 @@ import datetime
 
 
 def downloader(url, filename):
-    patternFile = open('pSearch.dat', 'r').read().splitlines()
+    patternFile = open('config/pSearch.dat', 'r').read().splitlines()
     data = ""
     try:
         try:

@@ -19,7 +19,7 @@ def scrape():
 
     #try an open the pattern file.
     try:
-        patternFile = open('webscrape.dat', 'r').read().splitlines()
+        patternFile = open('config/webscrape.dat', 'r').read().splitlines()
     except:
         print "There was an error opening the webscrape.dat file"
         raise

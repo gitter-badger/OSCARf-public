@@ -41,8 +41,8 @@ def newsStart():
     Edit feeds in: feeds.dat
     Edit filters in: filter.dat
     """
-    my_feeds = open('rss/'+"feeds.dat").readlines()
-    keywords = open('rss/'+"filter.dat").read().splitlines()
+    my_feeds = open('config/'+"rssfeeds.dat").readlines()
+    keywords = open('config/'+"rssfilter.dat").read().splitlines()
     print "keywords: ", keywords
     score_threshold = input("Please enter keyword threshold (ex: 2): ")
     score_dictionary = {}
