@@ -6,15 +6,15 @@ import os
 from time import sleep
 import sys
 
-if not os.path.exists("auth"):
+if not os.path.exists("../auth"):
     print "Adding the 'auth' directory."
     try:
-        os.mkdir("auth")
+        os.mkdir("../auth")
     except:
         exit("run as sudo!")
-if not os.path.isfile('auth/twitter_app.dat'):
+if not os.path.isfile('../auth/twitter_app.dat'):
     try:
-        appfile = open('auth/twitter_app.dat', 'w')
+        appfile = open('../auth/twitter_app.dat', 'w')
         appfile.write("#App name\n")
         appname = raw_input("Enter twitter app name: ")
         appfile.write(appname+'\n')
@@ -47,7 +47,7 @@ except:
 #Authentication information for the application
 #Open file for twitter app auth
 try:
-    tappfile = open('auth/'+'twitter_app.dat', 'r')
+    tappfile = open('../auth/'+'twitter_app.dat', 'r')
     tappline = tappfile.readlines()
     APP_NAME = tappline[1].rstrip()
     CONSUMER_KEY = tappline[3].rstrip()
@@ -57,7 +57,7 @@ except:
     exit("Could not read app data file for twitter")
 
 #file that Oauth data is stored
-TOKEN_FILE = 'auth/'+'token.txt'
+TOKEN_FILE = '../auth/'+'token.txt'
 try:
     (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
 except IOError, e:
@@ -68,14 +68,14 @@ except IOError, e:
     write_token_file(TOKEN_FILE, oauth_token, oauth_token_secret)
 
 print "Creating shodan auth file"
-if not os.path.exists("auth"):
+if not os.path.exists("../auth"):
     exit("auth directory not found")
 
 
-if os.path.isfile('auth/shodankey.txt'):
+if os.path.isfile('../auth/shodankey.txt'):
     exit('Shodan auth is already present!')
 else:
-    f = open('auth/'+'shodankey.txt', 'w')
+    f = open('../auth/'+'shodankey.txt', 'w')
     key = raw_input('Shodan API key: ')
     f.write('#Shodan API key\n')
     f.write(key+'\n')
