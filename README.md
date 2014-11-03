@@ -23,6 +23,8 @@ OSCAR uses a few libraries. These include:
 - shodan
 - readline
 - pillow
+- BeautifulSoup4
+- Mechanize
 
 These can be installed via pip: `pip install -r requirements.txt`
 
