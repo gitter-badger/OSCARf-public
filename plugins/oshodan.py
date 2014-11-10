@@ -3,11 +3,14 @@
 
 import thread
 import shodan
-shodan_key_file = open('auth/shodankey.txt', 'r')
-shodan_key_line = shodan_key_file.readlines()
-SHODAN_API_KEY = shodan_key_line[1].rstrip()
-sho_api = shodan.Shodan(SHODAN_API_KEY)
-shodan_key_file.close()
+try:
+    shodan_key_file = open('auth/shodankey.txt', 'r')
+    shodan_key_line = shodan_key_file.readlines()
+    SHODAN_API_KEY = shodan_key_line[1].rstrip()
+    sho_api = shodan.Shodan(SHODAN_API_KEY)
+    shodan_key_file.close()
+except:
+    sho_api = None
 
 
 def menu():
@@ -63,6 +66,10 @@ def downloader(res_out, search_query):
 
 
 def select_mod():
+    if sho_api is None:
+        print "Missing key; Please install a Shodan API key in",
+        print"./auth/shodankey"
+        return
     menu_select = raw_input('Please enter an option: ')
     if menu_select == '1':
         sub_search(sho_api)
