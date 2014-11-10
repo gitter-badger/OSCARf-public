@@ -69,6 +69,7 @@ def select_mod():
     if sho_api is None:
         print "Missing key; Please install a Shodan API key in",
         print"./auth/shodankey"
+        return
     menu_select = raw_input('Please enter an option: ')
     if menu_select == '1':
         sub_search(sho_api)
