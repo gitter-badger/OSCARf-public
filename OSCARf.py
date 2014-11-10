@@ -77,26 +77,30 @@ except:
     print "You will not be able to use the twitter collection side of oscar!"
 
 
-#Open file for twitter app auth
-tappfile = open('auth/'+'twitter_app.dat', 'r')
-tappline = tappfile.readlines()
-APP_NAME = tappline[1].rstrip()
-CONSUMER_KEY = tappline[3].rstrip()
-CONSUMER_SECRET = tappline[5].rstrip()
-tappfile.close()
-
-#file that Oauth data is stored
-TOKEN_FILE = 'auth/'+'token.txt'
-
 try:
-    (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
-except IOError, e:
-    print "Please run the TWITTERSETUP.py file to get the token file!"
-    exit()
+    #Open file for twitter app auth
+    tappfile = open('auth/'+'twitter_app.dat', 'r')
+    tappline = tappfile.readlines()
+    APP_NAME = tappline[1].rstrip()
+    CONSUMER_KEY = tappline[3].rstrip()
+    CONSUMER_SECRET = tappline[5].rstrip()
+    tappfile.close()
 
-t_auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-t_auth.set_access_token(oauth_token, oauth_token_secret)
-t_api = tweepy.API(t_auth)
+    #file that Oauth data is stored
+    TOKEN_FILE = 'auth/'+'token.txt'
+
+    try:
+        (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
+    except IOError, e:
+        print "Please run the TWITTERSETUP.py file to get the token file!"
+        exit()
+
+    t_auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    t_auth.set_access_token(oauth_token, oauth_token_secret)
+    t_api = tweepy.API(t_auth)
+except:
+    t_auth = None
+    t_api = None
 
 
 def main():
@@ -177,6 +181,8 @@ def socialMenu():
 
 
 def twitMenu():
+    if t_auth is None or t_api is None:
+        print "Twitter is disabled; please install an API key for twitter"
     print """
     1. Live stream twitter (saved as csv)
     2. Live stream NO LOGGING!
