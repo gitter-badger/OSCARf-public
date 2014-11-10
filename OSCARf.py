@@ -183,6 +183,7 @@ def socialMenu():
 def twitMenu():
     if t_auth is None or t_api is None:
         print "Twitter is disabled; please install an API key for twitter"
+        return
     print """
     1. Live stream twitter (saved as csv)
     2. Live stream NO LOGGING!
