@@ -68,7 +68,7 @@ def downloader(a):
 
 def FBInfo():
     FBurl = 'https://graph.facebook.com/'
-    print 'Please enter the username of the target'
+    print 'Please enter the username or ID of the target'
     print 'EX: bobsmith3'
     userName = raw_input(': ')
 
@@ -76,9 +76,11 @@ def FBInfo():
 
     fullURL = FBurl + userName
     try:
-        data = urllib2.urlopen(fullURL)
-        jsonResponse = json.load(data)
-        print jsonResponse
+        #data = urllib2.urlopen(fullURL)
+        data = requests.get(fullURL)
+        #jsonResponse = json.load(data)
+        #print jsonResponse
+        print data.json()
         print '\n'
     except:
 
@@ -98,14 +100,17 @@ def FBUsr():
         fullURL = FBurl + userName
         try:
             try:
-                data = urllib2.urlopen(fullURL)
-            except urllib2.HTTPError:
+                #data = urllib2.urlopen(fullURL)
+                data = requests.get(fullURL)
+            #except urllib2.HTTPError:
+            except:
                 print 'There was an error connecting to Facebook!'
                 return
 
       # load the JSON response from FB
 
-            jsonResponse = json.load(data)
+            #jsonResponse = json.load(data)
+            res = data.json()
             print '\n', '\n', '\n'
 
       # Try and set the f_link var to the link section of json data..
@@ -114,7 +119,8 @@ def FBUsr():
 
             try:
                 #f_link = jsonResponse['link']
-                fblink1 = 'https://facebook.com/' + jsonResponse['id']
+                #fblink1 = 'https://facebook.com/' + jsonResponse['id']
+                fblink1 = 'https://facebook.com/' + res['id']
                 req = requests.get(fblink1)
                 cookieref = req.cookies['reg_fb_ref']
                 decoded = urllib.unquote(cookieref)
@@ -123,20 +129,27 @@ def FBUsr():
 
         # can still generate link, just will not get username.
 
-                f_link = 'https://facebook.com/' + jsonResponse['id']
+                #f_link = 'https://facebook.com/' + jsonResponse['id']
+                f_link = 'https://facebook.com/' + res['id']
 
             try:
-                gender = jsonResponse['gender']
-                locale = jsonResponse['locale']
+                #gender = jsonResponse['gender']
+                #locale = jsonResponse['locale']
+                gender = res['gender']
+                locale = res['locale']
             except:
                 gender = ""
                 locale = ""
             print '---------------Results-------------------'
-            print jsonResponse['id'], '\n', jsonResponse['name'], '\n', \
+            #print jsonResponse['id'], '\n', jsonResponse['name'], '\n', \
+                #gender, '\n', locale, \
+                #'\n', f_link, '\n'
+            print res['id'], '\n', res['name'], '\n', \
                 gender, '\n', locale, \
                 '\n', f_link, '\n'
             print '---------------Results-------------------\n'
-            a = jsonResponse['id']
+            #a = jsonResponse['id']
+            a = res['id']
             dlprof = raw_input('Download Profile Picture?[y/n]: ')
             if dlprof == 'y' or dlprof == 'Y':
 
@@ -155,8 +168,10 @@ def FBUsr():
                     pass
             else:
                 pass
-            if jsonResponse['username']:
-                usernom = jsonResponse['username']
+            #if jsonResponse['username']:
+            if res['username']:
+                #usernom = jsonResponse['username']
+                usernom = res['username']
 
         # thread.start_new_thread(instacheck,(usernom,))
 
