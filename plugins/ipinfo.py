@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import urllib2
-import json
+#import urllib2
+#import json
 import time
 import webbrowser
+import requests
 
 
 def lookup(ip):
@@ -12,8 +13,10 @@ def lookup(ip):
     ipUrl = 'http://ip-api.com/json/'
     ip_query = ipUrl + ip
     try:
-        data = urllib2.urlopen(ip_query)
-        jsonResponse = json.load(data)
+        #data = urllib2.urlopen(ip_query)
+        #jsonResponse = json.load(data)
+        data = requests.get(ip_query)
+        jsonResponse = data.json()
         print
         print '-- IP Results --'
         print 'IP: ', jsonResponse['query']
@@ -31,8 +34,10 @@ def lookup(ip):
         try:
             ipUrl = 'https://freegeoip.net/json/'
             ip_query = ipUrl + ip
-            data = urllib2.urlopen(ip_query)
-            jsonResponse = json.load(data)
+            #data = urllib2.urlopen(ip_query)
+            #jsonResponse = json.load(data)
+            data = requests.get(ip_query)
+            jsonResponse = data.json()
             print
             print '-- IP Results --'
             print 'IP: ', jsonResponse['ip']
