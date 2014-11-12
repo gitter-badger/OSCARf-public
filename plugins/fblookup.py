@@ -3,10 +3,12 @@
 
 import json
 import urllib2
+import urllib
 import os
 import thread
 import urllib
 from time import sleep
+import requests
 
 # PIL is used to open/process images with python
 
@@ -111,7 +113,12 @@ def FBUsr():
       # a message
 
             try:
-                f_link = jsonResponse['link']
+                #f_link = jsonResponse['link']
+                fblink1 = 'https://facebook.com/' + jsonResponse['id']
+                req = requests.get(fblink1)
+                cookieref = req.cookies['reg_fb_ref']
+                decoded = urllib.unquote(cookieref)
+                f_link = decoded
             except:
 
         # can still generate link, just will not get username.
