@@ -25,6 +25,7 @@ OSCAR uses a few libraries. These include:
 - pillow
 - BeautifulSoup4
 - Mechanize
+- Requests
 
 These can be installed via pip: `pip install -r requirements.txt`
 
