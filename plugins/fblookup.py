@@ -124,9 +124,16 @@ def FBUsr():
         # can still generate link, just will not get username.
 
                 f_link = 'https://facebook.com/' + jsonResponse['id']
+
+            try:
+                gender = jsonResponse['gender']
+                locale = jsonResponse['locale']
+            except:
+                gender = ""
+                locale = ""
             print '---------------Results-------------------'
             print jsonResponse['id'], '\n', jsonResponse['name'], '\n', \
-                jsonResponse['gender'], '\n', jsonResponse['locale'], \
+                gender, '\n', locale, \
                 '\n', f_link, '\n'
             print '---------------Results-------------------\n'
             a = jsonResponse['id']
