@@ -7,3 +7,4 @@ auth/
 *.csv
 .swp
 .DS_Store
+.idea
