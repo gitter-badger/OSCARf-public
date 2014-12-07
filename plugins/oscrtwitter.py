@@ -67,8 +67,8 @@ def lv_stream(t_auth):
                 saveFile.write('\n')
                 saveFile.close()
                 return True
-            except (BaseException, e, KeyboardInterrupt, SystemExit):
-                print 'failed on data, ', str(e)
+            except (BaseException, KeyboardInterrupt, SystemExit):
+                #print 'failed on data, ', str(e)
                 sleep(3)
                 return
 
@@ -95,8 +95,8 @@ def lv_streamno(t_auth):
                 print status.author.screen_name.encode('utf-8') + ': ' \
                     + status.text.encode('utf-8')
                 return True
-            except (BaseException, e, KeyboardInterrupt, SystemExit):
-                print 'failed on data, ', str(e)
+            except (BaseException, KeyboardInterrupt, SystemExit):
+                #print 'failed on data, ', str(e)
                 sleep(3)
                 return
 
