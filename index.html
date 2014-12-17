@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="OSCARf public : Python tool to aid in the collection of OSINT data">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>OSCARf public</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/NinjaSl0th/OSCARf-public">View on GitHub</a>
+
+          <h1 id="project_title">OSCARf public</h1>
+          <h2 id="project_tagline">Python tool to aid in the collection of OSINT data</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/NinjaSl0th/OSCARf-public/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/NinjaSl0th/OSCARf-public/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="oscar-f" class="anchor" href="#oscar-f" aria-hidden="true"><span class="octicon octicon-link"></span></a>OSCAR-F</h1>
+
+<p>Python OSINT Platform</p>
+
+<p><strong>OSCARf was coded/designed in Linux and Mac. Don't complain if you are running Windows and you cannot get it working</strong>
+Windows support is something that I am going to address at a later date.</p>
+
+<p>OSCAR-F is designed to aid in the process of information gathering. It was formed with the idea of not having to open
+so many tabs in a browser.</p>
+
+<p>There are a few bugs in OSCAR-F, however, we are slowly working on crushing them and working on features.</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h2>
+
+<p><strong>All setup files are located within the setup directory!</strong></p>
+
+<p>OSCAR uses a few libraries. These include:</p>
+
+<ul>
+<li>Twitter</li>
+<li>tweepy</li>
+<li>feedparser</li>
+<li>shodan</li>
+<li>readline</li>
+<li>pillow</li>
+<li>BeautifulSoup4</li>
+<li>Mechanize</li>
+<li>Requests</li>
+</ul>
+
+<p>These can be installed via pip: <code>pip install -r requirements.txt</code></p>
+
+<p>If you receive setup errors similar to:
+  <code>compilation terminated.</code></p>
+
+<p><code>error: command 'gcc' failed with exit status 1</code></p>
+
+<p>Please install the python-dev package: example: <code>apt-get install python-dev</code> </p>
+
+<p><strong>Please note that you will need to setup ONE twitter app for you/your business.</strong></p>
+
+<p>~<strong>You will probably need to use sudo to run the setup script. This is becasue it creates files and directories.</strong>~</p>
+
+<p>The the readline feature is completely optional.</p>
+
+<p>Please be sure to run the <code>DEPENDENCY_CHECK</code> script first! Additionally, as noted above,  dependencies can be installed via <code>pip install -r requirements.txt</code></p>
+
+<p>After running the dependency check, run the setup.py script. This will allow you to setup all necessary auth files/data.
+<strong>PLEASE NOTE THAT THE SETUP SCRIPT WILL NOT INSTALL MISSING LIBRARIES! Please use pip.</strong></p>
+
+<h2>
+<a id="to-setup-twitter-application" class="anchor" href="#to-setup-twitter-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>To setup Twitter Application</h2>
+
+<p>Navigate to: <a href="https://apps.twitter.com/">https://apps.twitter.com/</a> and setup a new application. Please note the name and keys associated with it. 
+You sould only need to have a read only application!</p>
+
+<h2>
+<a id="shodan-api-key" class="anchor" href="#shodan-api-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shodan API KEY</h2>
+
+<p>Once you have a ShodanHQ account or login, go to: <a href="http://www.shodanhq.com/api_doc">http://www.shodanhq.com/api_doc</a> and copy the API key. Please note that if you want to use ALL of the shodan functionality of OSCAR, you will need to purchase an "Unlocked API" </p>
+
+<p>View API KEY: <a href="http://www.shodanhq.com/api_doc">http://www.shodanhq.com/api_doc</a></p>
+
+<p>You can purchase the "Unlocked API" addon here: <a href="http://www.shodanhq.com/data/addons">http://www.shodanhq.com/data/addons</a></p>
+
+<h2>
+<a id="to-scrape-pastebin" class="anchor" href="#to-scrape-pastebin" aria-hidden="true"><span class="octicon octicon-link"></span></a>To scrape pastebin</h2>
+
+<p>To scrape pastebin, add regex strings to /config/pSearch.dat located in the root directory. After this, proceed to use oscar.</p>
+
+<h2>
+<a id="to-edit-rss-filter-options" class="anchor" href="#to-edit-rss-filter-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>To edit rss filter options</h2>
+
+<p>Edit the keywords in /config/rssfilter.dat</p>
+
+<h2>
+<a id="to-addremove-rss-feeds" class="anchor" href="#to-addremove-rss-feeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>To add/remove rss feeds</h2>
+
+<p>Edit rss links in /config/rssfeeds.dat</p>
+
+<h2>
+<a id="to-scrape-web-source-code" class="anchor" href="#to-scrape-web-source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>To scrape web source code</h2>
+
+<p>Edit regex info in /config/webscrape.dat in the root. The path will change soon. </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OSCARf public maintained by <a href="https://github.com/NinjaSl0th">NinjaSl0th</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
