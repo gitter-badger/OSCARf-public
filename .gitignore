@@ -8,5 +8,3 @@ auth/
 .DS_Store
 .idea
 pastebin/seen-pastes.txt
-
-requirements.txt
