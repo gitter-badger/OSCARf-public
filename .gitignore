@@ -3,8 +3,10 @@ plugins/db.py
 auth/
 *.pyc
 *.jpg
-*.txt
 *.csv
 .swp
 .DS_Store
 .idea
+pastebin/seen-pastes.txt
+
+requirements.txt
