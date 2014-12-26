@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import json
+#import json
 import urllib2
 import urllib
 import os
 import thread
-import urllib
 from time import sleep
 import requests
 

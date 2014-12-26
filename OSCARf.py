@@ -19,12 +19,12 @@ except urllib2.URLError:
     print "An internet connection is required to use OSCAR-F"
     exit()
 
-import csv
+#import csv
 import sys
-import json
-import os
+#import json
+#import os
 import time
-import re
+#import re
 
 try:
     import readline
@@ -61,7 +61,7 @@ asciis.asciiart()
 
 try:
     import tweepy
-    from tweepy import *
+    #from tweepy import *
     from tweepy.streaming import *
 except:
     print "[+]ERROR: Unable to import the tweepy library installed!!"

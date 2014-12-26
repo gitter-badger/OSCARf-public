@@ -4,15 +4,15 @@
 from bs4 import BeautifulSoup as bsoup
 import requests as req
 import mechanize
-import urllib
-import urllib2
-import re
+#import urllib
+#import urllib2
+#import re
 import csv
-import sys
-import json
-import os
+#import sys
+#import json
+#import os
 import time
-import random
+#import random
 import cookielib
 import thread
 
