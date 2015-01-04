@@ -8,3 +8,7 @@ auth/
 .DS_Store
 .idea
 pastebin/seen-pastes.txt
+
+HOST-RESULTS.txt
+
+NET-RESULTS.txt
