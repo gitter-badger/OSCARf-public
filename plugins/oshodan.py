@@ -23,7 +23,7 @@ def menu():
     print '[3] Search for printers by organization (ex: Microsoft)'
     print '[4] Search for ports by organization (supported ports: ',
     print 'http://www.shodanhq.com/help/filters#port)'
-    print '[5] Seach Metasploit modules (useful if you find something good)'
+    print '[5] Stream for SSL certs *REQUIRES STREAMING API ACCESS*' 
     print '[0] Exit'
     print
     select_mod()
@@ -80,7 +80,7 @@ def select_mod():
     elif menu_select == '4':
         port_search(sho_api)
     elif menu_select == '5':
-        sploit_search(sho_api)
+        cert_search(sho_api)
     elif menu_select == '0':
         return
     else:
@@ -157,18 +157,12 @@ def port_search(sho_api):
         print 'Error: %s' % e
         menu()
 
-
-def sploit_search(sho_api):
-    res_out = open('METASPLOIT-RESULTS.txt', 'a')
-    query = raw_input('Enter what you want to look for:')
-    search_query = sho_api.msf.search(query)
-    print 'Metasploit Modules Found: %s' % search_query['total']
+def cert_search(sho_api):
+    #res_out = 'CERTS.txt'
     try:
-        for module in search_query['matches']:
-            print >> res_out, '%s: %s' % (module['type'], module['name'])
-        res_out.close()
-        print 'Results have been exported to: METASPLOIT-RESULTS.txt'
-        menu()
+        for banner in sho_api.stream.ports(['443']):
+            if 'opts' in banner and 'pem' in banner['opts']:
+                print banner['opts']['pem']
     except Exception, e:
         print 'Error: %s' % e
         menu()
