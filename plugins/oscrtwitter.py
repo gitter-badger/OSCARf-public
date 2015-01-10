@@ -60,6 +60,7 @@ def lv_stream(t_auth):
 
                 print status.author.screen_name.encode('utf-8') + ': ' \
                     + status.text.encode('utf-8')
+                print '\n'
                 saveFile = open('STREAM.csv', 'a')
                 saveFile.write(str(time.ctime()) + ',,'
                                + status.author.screen_name.encode('utf-8') +
@@ -94,6 +95,7 @@ def lv_streamno(t_auth):
 
                 print status.author.screen_name.encode('utf-8') + ': ' \
                     + status.text.encode('utf-8')
+                print '\n'
                 return True
             except (BaseException, KeyboardInterrupt, SystemExit):
                 #print 'failed on data, ', str(e)
