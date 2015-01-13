@@ -45,6 +45,7 @@ from plugins import portlook
 from plugins import instag
 from plugins import webscrape
 from plugins import asciis
+from plugins import domainip
 
 asciis.asciiart()
 
@@ -283,6 +284,7 @@ def networkMod():
     print """
     1. Lookup IP Address
     2. Port Lookup (SANS website)
+    3. Domain to IP
     0. Return
     """
     opt = raw_input('Enter an option: ')
@@ -290,11 +292,14 @@ def networkMod():
         ipInfo()
     elif opt == "2":
         prtLook()
+    elif opt == "3":
+        domainip.c()
     elif opt == "0":
         main()
     else:
         print "Invalid option!"
         networkMod()
+    networkMod()
 
 
 ######################
