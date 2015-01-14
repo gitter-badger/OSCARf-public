@@ -22,7 +22,7 @@ except urllib2.URLError:
 #import csv
 import sys
 #import json
-#import os
+import os
 import time
 #import re
 
@@ -46,9 +46,6 @@ from plugins import instag
 from plugins import webscrape
 from plugins import asciis
 from plugins import domainip
-
-asciis.asciiart()
-
 
 #----Why 2 twitter libs?----#
 #The auth for the twitter lib is nicer as it can create an auth file
@@ -103,8 +100,14 @@ except:
     t_auth = None
     t_api = None
 
-
 def main():
+    time.sleep(3)
+    try:
+        os.system('clear')
+    except Exception:
+        os.system('cls')
+    finally:
+        asciis.asciiart()
     try:
         print """
         OSCAR (Open Source Collection And Recon) Framework
