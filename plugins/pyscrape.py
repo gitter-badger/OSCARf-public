@@ -49,6 +49,7 @@ def starter():
     print "Scraping for pastes..."
     while True:
         try:
+            time.sleep(1)
             #open the pastebin archive
             data = urllib.urlopen("http://pastebin.com/archive").read()
             data = data.split('<table class="maintable" cellspacing="0">')
