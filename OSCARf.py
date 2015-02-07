@@ -12,12 +12,12 @@
 #On exception it will alert the user
 import urllib2
 
-try:
-    urllib2.urlopen("https://google.com", timeout=10)
-except urllib2.URLError:
-    print "[+]ERROR: Could not detect an active internet connection.",
-    print "An internet connection is required to use OSCAR-F"
-    exit()
+#try:
+#    urllib2.urlopen("https://google.com", timeout=10)
+#except urllib2.URLError:
+#    print "[+]ERROR: Could not detect an active internet connection.",
+#    print "An internet connection is required to use OSCAR-F"
+#    exit()
 
 #import csv
 import sys
