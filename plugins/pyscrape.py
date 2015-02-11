@@ -46,7 +46,7 @@ def starter():
     if not os.path.exists("pastebin/seen-pastes.txt"):
         chkf = open("pastebin/seen-pastes.txt", 'w')
         chkf.close()
-    print "Scraping for pastes..."
+    print "Scraping for pastes...\n"
     while True:
         try:
             time.sleep(1)
@@ -56,19 +56,17 @@ def starter():
             data = data[1]
             data = data.split('</table>')
             data = data[0]
-
-            data = data.replace('<td><img src="/i/t.gif"  class="i_p0" alt=""'
-                                'border="0" /><a href="/', "!!HTML!!")
+            data = data.replace('<td><img src="/i/t.gif"  class="i_p0" alt="" border="0" /><a href="/', "!!HTML!!")
             data = data.replace('</a>', "!!HTML!!")
             data = data.split("!!HTML!!")
             for i in data:
                 i = i.split("\">")
                 i = i[0]
                 if not (("</td>" in i) or ("<tr class=" in i)):
-                    seenf = open("pastebin/seen-pastes.txt",
-                                 'r').read().splitlines()
+                    seenf = open("pastebin/seen-pastes.txt",'r').read().splitlines()
                     if i not in seenf:
-                        #print i
+                        sys.stdout.write("\rCurrently on paste: %s" % i)
+                        sys.stdout.flush()
                         seenf2 = open("pastebin/seen-pastes.txt", 'a')
                         seenf2.write(i)
                         seenf2.write("\n")
