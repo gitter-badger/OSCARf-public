@@ -177,8 +177,18 @@ def bing(pos, com, saveout):
         time.sleep(2)
     refs = []  # clear temporary array after running
     comp = []  # clear temporary array after running
-    return
-
+    
+    # now that search is done, do another or return to main
+    print """
+    End of results...
+    1. Search again
+    0. Return
+    """
+    retCheck = raw_input("Choose an option:")
+    if retCheck == "1":
+        start()
+    elif retCheck == "0":
+        return
 
 # function to try and remove duplicates from the lists.
 
