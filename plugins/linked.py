@@ -187,7 +187,7 @@ def bing(pos, com, saveout):
     retCheck = raw_input("Choose an option:")
     if retCheck == "1":
         start()
-    elseif retCheck == "0":
+    elif retCheck == "0":
         return
 
 # function to try and remove duplicates from the lists.
