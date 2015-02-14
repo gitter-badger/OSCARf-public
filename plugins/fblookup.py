@@ -89,7 +89,7 @@ def FBInfo():
 
 def FBUsr():
     FBurl = 'https://graph.facebook.com/'
-    peopleInput = input('How many people would you like to lookup?: ')
+    peopleInput = raw_input('How many people would you like to lookup?: ')
     people = 0; # set to 0 to skip if user input is invalid
     myCounter = 1
     
