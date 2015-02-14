@@ -14,7 +14,13 @@ def scrape():
     site = raw_input("Enter page: ")
 
     #open site. read so we can read in a string context
-    data = urllib2.urlopen(site).read()
+    #test for valid and complete URL
+    try:
+        data = urllib2.urlopen(site).read()
+    except ValueError:
+        print "INVALID URL: Be sure to include protocol (e.g. HTTP)"
+        return
+    
     #print data
 
     #try an open the pattern file.
@@ -37,6 +43,7 @@ def scrape():
 
             #close the file..or else
                 outfile.close()
+                print "Scrape successful. Data output to scrape-RESULTS.txt."
         else:  # only need an else because m is boolean
             # Continue the loop if not a match so it can go on to the next
             # sequence
