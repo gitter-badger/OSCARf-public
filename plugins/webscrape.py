@@ -29,6 +29,8 @@ def scrape():
     except:
         print "There was an error opening the webscrape.dat file"
         raise
+    #create counter for counting regex expressions from webscrape.dat
+    counter = 0
     #for each loop so we can process each specified regex
     for pattern in patternFile:
         m = re.findall(pattern, data)
@@ -43,8 +45,11 @@ def scrape():
 
             #close the file..or else
                 outfile.close()
-                print "Scrape successful. Data output to scrape-RESULTS.txt."
+                counter+=1
+                print "Scrape item " + str(counter) + " successsful. Data output to scrape-RESULTS.txt."
         else:  # only need an else because m is boolean
+            counter+=1
+            print "No match for item " + str(counter) + ". Continuing."
             # Continue the loop if not a match so it can go on to the next
             # sequence
             # NOTE: you don't *really* need an else here...
