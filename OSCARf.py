@@ -34,18 +34,19 @@ except:
 #################
 # LOCAL IMPORTS #
 #################
-from plugins import pyscrape
-from plugins import linked
-from plugins import ipinfo
-from plugins import newsfeed
-from plugins import fblookup
-from plugins import oscrtwitter
-from plugins import oshodan
-from plugins import portlook
-from plugins import instag
-from plugins import webscrape
-from plugins import asciis
-from plugins import domainip
+from plugins import *
+#from plugins import pyscrape
+#from plugins import linked
+#from plugins import ipinfo
+#from plugins import newsfeed
+#from plugins import fblookup
+#from plugins import oscrtwitter
+#from plugins import oshodan
+#from plugins import portlook
+#from plugins import instag
+#from plugins import webscrape
+#from plugins import asciis
+#from plugins import domainip
 
 #----Why 2 twitter libs?----#
 #The auth for the twitter lib is nicer as it can create an auth file
