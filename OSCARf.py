@@ -90,7 +90,7 @@ try:
     try:
         (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
     except IOError, e:
-        print "Please run the TWITTERSETUP.py file to get the token file!"
+        print "Please run the setup.py file to get your token file!"
         exit()
 
     t_auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
