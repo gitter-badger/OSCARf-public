@@ -103,6 +103,7 @@ except:
     t_api = None
 
 def main():
+    """Main Function"""
     time.sleep(3)
     try:
         os.system('clear')
@@ -158,6 +159,8 @@ def main():
 #-- Social Media Menu   --#
 ###########################
 def socialMenu():
+    """Select Social Media Source"""
+    
     print """
     1. Twitter
     2. FaceBook
@@ -187,6 +190,7 @@ def socialMenu():
 
 
 def twitMenu():
+    """Menu for twitter"""
     if t_auth is None or t_api is None:
         print "Twitter is disabled; please install an API key for twitter"
         return
@@ -236,6 +240,7 @@ def twitMenu():
 ########################
 
 def fbMenu():
+    """Facebook Menu"""
     print """
     1. Get user info - Raw JSON Dump/Not Formatted
     2. Get user info - Formatted, Lookup multiple users
@@ -256,6 +261,7 @@ def fbMenu():
 
 
 def instachek():
+    """Initiate Instagram username checker"""
     usernom = raw_input("Enter username: ")
     instag.checker(usernom)
     socialMenu()
@@ -266,6 +272,7 @@ def instachek():
 
 
 def news():
+    """Launch the newsfeed reader"""
     newsfeed.newsStart()
     main()
 
@@ -274,6 +281,7 @@ def news():
 #-- IP Info --#
 ###############
 def ipInfo():
+    """IP Address lookup function"""
     ip = raw_input("Enter IP: ")
     ip = ip.rstrip()
     ipinfo.lookup(ip)
@@ -281,11 +289,13 @@ def ipInfo():
 
 
 def prtLook():
+    """Function to call the portlookup lib"""
     portlook.lookup()
     networkMod()
 
 
 def networkMod():
+    """Function to choose what network lookup tool to use"""
     print """
     1. Lookup IP Address
     2. Port Lookup (SANS website)
@@ -311,6 +321,7 @@ def networkMod():
 #- Pastebin Scraper -#
 ######################
 def pasteScrape():
+    """Initiate pastebin scraper"""
     try:
         pyscrape.starter()
     except KeyboardInterrupt:
@@ -319,6 +330,7 @@ def pasteScrape():
 
 
 def linkedin():
+    """Start linkedin search tool"""
     linked.start()
     time.sleep(5)
     if linked.saveout:
@@ -327,11 +339,13 @@ def linkedin():
 
 
 def oscrShodan():
+    """Call/launch the Shodan module"""
     oshodan.menu()
     main()
 
 
 def wscrape():
+    """Call/launch the web scraper module"""
     webscrape.scrape()
     main()
 
