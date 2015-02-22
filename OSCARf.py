@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+"""Python script to aid in the collection of OSINT data"""
 
 #External libraries needed to use oscar:
 #twitter
@@ -150,7 +151,7 @@ def main():
             print "You entered an invalid option!"
             main()
     except (KeyboardInterrupt):
-            main()
+        main()
 
 
 ###########################
