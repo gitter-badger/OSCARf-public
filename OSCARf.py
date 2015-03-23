@@ -13,19 +13,10 @@
 #On exception it will alert the user
 import urllib2
 
-#try:
-#    urllib2.urlopen("https://google.com", timeout=10)
-#except urllib2.URLError:
-#    print "[+]ERROR: Could not detect an active internet connection.",
-#    print "An internet connection is required to use OSCAR-F"
-#    exit()
-
-#import csv
 import sys
-#import json
 import os
 import time
-#import re
+
 
 try:
     import readline
@@ -36,18 +27,6 @@ except:
 # LOCAL IMPORTS #
 #################
 from plugins import *
-#from plugins import pyscrape
-#from plugins import linked
-#from plugins import ipinfo
-#from plugins import newsfeed
-#from plugins import fblookup
-#from plugins import oscrtwitter
-#from plugins import oshodan
-#from plugins import portlook
-#from plugins import instag
-#from plugins import webscrape
-#from plugins import asciis
-#from plugins import domainip
 
 #----Why 2 twitter libs?----#
 #The auth for the twitter lib is nicer as it can create an auth file
@@ -57,7 +36,7 @@ from plugins import *
 # the application. You will not be prompted for a pin after getting a
 #token.
 #----END----#
-#imports for the streaming lib
+# imports for the streaming lib
 
 try:
     import tweepy
@@ -102,6 +81,7 @@ except:
     t_auth = None
     t_api = None
 
+__author__ = "NinjaSl0th - @ninjasl0th"
 def main():
     """Main Function"""
     time.sleep(3)
