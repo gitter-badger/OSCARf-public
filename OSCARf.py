@@ -82,6 +82,7 @@ except:
     t_api = None
 
 __author__ = "NinjaSl0th - @ninjasl0th"
+
 def main():
     """Main Function"""
     time.sleep(3)
@@ -106,7 +107,7 @@ def main():
         -------------
         5. Pastebin Scraper
         -------------
-        6. Web Source File Scraper
+        6. Web Tools
         -------------
 
         0. Exit OSCAR
@@ -124,7 +125,8 @@ def main():
         elif opt == "5":
             pasteScrape()
         elif opt == "6":
-            wscrape()
+            webtools()
+            #wscrape()
         elif opt == "0":
             print "Thanks for using OSCAR!"
             sys.exit(0)
@@ -328,6 +330,30 @@ def wscrape():
     """Call/launch the web scraper module"""
     webscrape.scrape()
     main()
+
+def getcn():
+    sslscan.starter()
+    
+def webtools():
+    """Menu for web tools"""
+    print """
+    1. Web Source Scraper
+    2. SSL CN grabber
+    
+    0. Back
+    """
+    opt = raw_input("Enter an option: ")
+    if opt == "1":
+        wscrape()
+    elif opt == "2":
+        getcn()
+    elif opt == "0":
+        main()
+    else:
+        print "Invalid Option!"
+        webtools()
+    webtools()
+    
 
 if __name__ == "__main__":
     # users may wish to import part of this...
