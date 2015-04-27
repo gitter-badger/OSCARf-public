@@ -6,6 +6,8 @@ Python OSINT Platform
 **OSCARf was coded/designed in Linux and Mac. Don't complain if you are running Windows and you cannot get it working**
 Windows support is something that I am going to address at a later date.
 
+**Install scripts are now in beta:** https://github.com/V12-Operations/Install-OSCARf
+
 OSCAR-F is designed to aid in the process of information gathering. It was formed with the idea of not having to open
 so many tabs in a browser.
 
