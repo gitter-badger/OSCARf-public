@@ -48,6 +48,7 @@ def downloader(res_out, search_query):
         except:
             pass
         outfile.write('''''')
+        outfile.write('\n')
         a = result['port']
         b = result['os']
         outfile.write('Port:')
