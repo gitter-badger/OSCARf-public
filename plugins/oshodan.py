@@ -56,7 +56,7 @@ def downloader(res_out, search_query):
         outfile.write('Detected OS:')
         outfile.write(str(b))
         outfile.write('\n')
-        outfile.write('--END--')
+        outfile.write('--END--\n')
         outfile.write('''''')
     outfile.close()
 
