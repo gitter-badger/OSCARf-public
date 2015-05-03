@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 """Python script to aid in the collection of OSINT data"""
 
+"""
+____   ________________   ________                
+\   \ /   /_   \_____  \  \_____  \ ______  ______
+ \   Y   / |   |/  ____/   /   |   \\____ \/  ___/
+  \     /  |   /       \  /    |    \  |_> >___ \ 
+   \___/   |___\_______ \ \_______  /   __/____  >
+                       \/         \/|__|       \/ 
+"""
+
 #External libraries needed to use oscar:
 #twitter
 #tweepy
