@@ -30,8 +30,7 @@ def hist_tweet(t_api):
             print 'Username: ', user.screen_name
             print 'Follower count: ', user.followers_count
             print '\n'
-            target_tweets = t_api.user_timeline(targetUsr,
-                                                count=num_tweets)
+            target_tweets = t_api.user_timeline(targetUsr,count=num_tweets)
             counter = 0
             for tweet in target_tweets:
                 counter += 1
@@ -61,10 +60,8 @@ def lv_stream(t_auth):
                 print status.author.screen_name.encode('utf-8') + ': ' \
                     + status.text.encode('utf-8')
                 print '\n'
-                saveFile = open('STREAM.csv', 'a')
-                saveFile.write(str(time.ctime()) + ',,'
-                               + status.author.screen_name.encode('utf-8') +
-                               ',,' + status.text.encode('utf-8'))
+                saveFile = open('STREAM_%s.csv' % filt, 'a')
+                saveFile.write(str(time.ctime()) + ',,'+ status.author.screen_name.encode('utf-8') +',,' + status.text.encode('utf-8'))
                 saveFile.write('\n')
                 saveFile.close()
                 return True
